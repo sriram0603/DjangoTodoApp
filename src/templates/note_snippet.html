@@ -1,0 +1,15 @@
+
+<div class="card">
+<div class="card-body">
+<h4>{{ note_snippet.title }} <span class="badge badge-{{ note_snippet.get_labels_display }}">{{ note_snippet.due_date }}</span>
+<span class="icons">
+{% if type == "DELETE" %}
+    <a href="{{ note_snippet.get_finished_url }}"><i class="fas fa-check-circle"></i></a>
+{% else %}
+    <a href="{{ note_snippet.get_recover_url }}"><i class="fas fa-times" ></i></a>
+{% endif %}
+    <a href="{{ note_snippet.get_delete_url }}"><i class="fas fa-trash-alt" style="color:red"></i></a>
+    </span>
+</h4>
+</div>
+</div>
